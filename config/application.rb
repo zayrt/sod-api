@@ -11,7 +11,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module OstyleProjet
+module Sod
   class Application < Rails::Application
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
     initializer 'setup_asset_pipeline', :group => :all  do |app|

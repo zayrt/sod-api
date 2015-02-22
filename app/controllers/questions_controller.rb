@@ -24,7 +24,8 @@ class QuestionsController < ApplicationController
 
 	def destroy
 		q = Question.find(params[:id])
-		if q.destroy
+		user = User.where(authentication_token: params[:token]).first
+		if !q.nil? && q.destroy
 			render json: {success: "Your question have been destroyed." }
 		else
 			render json: {error: "Your question can't be destroyed." }
