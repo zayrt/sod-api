@@ -1,0 +1,32 @@
+development:
+  sessions:
+    default:
+      database: 21questions_development
+      hosts:
+        - localhost:27017
+      options:
+  options:
+
+#development:
+#  sessions:
+#    default:
+#      uri: 'mongodb://sod-api:zbatmetdbz@ds039251.mongolab.com:39251/sodb'
+#      options:
+#        max_retries: 30
+#        retry_interval: 1
+#        timeout: 15
+#        refresh_interval: 10
+
+
+# <%= ENV['MONGODB_URL'] %>
+# 'mongodb://sod-api:zbatmetdbz@ds039251.mongolab.com:39251/sodb'
+
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGODB_URL'] %>
+      options:
+        max_retries: 30
+        retry_interval: 1
+        timeout: 15
+        refresh_interval: 10
