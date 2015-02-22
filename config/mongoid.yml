@@ -71,7 +71,7 @@ test:
 production:
   sessions:
     default:
-      uri: mongodb://sod-api-hub:zbatmetdbz@ds039251.mongolab.com:39251/sodb
+      uri: mongodb://sod-api:zbatmetdbz@ds039251.mongolab.com:39251/sodb
       options:
         skip_version_check: true
         safe: true
