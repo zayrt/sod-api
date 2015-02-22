@@ -71,11 +71,10 @@ test:
 production:
   sessions:
     default:
-      database: 21questions_production
-      hosts:
-        - localhost:27017
+      uri: <%= ENV['MONGODB_URL'] %>
       options:
-  options:
+        skip_version_check: true
+        safe: true
 
 staging:
   sessions:
