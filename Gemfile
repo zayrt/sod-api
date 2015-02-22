@@ -11,6 +11,9 @@ gem 'tzinfo-data', '1.2014.5'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
 
+
+
+
 gem 'mongoid', '~> 4.0.0'
 gem 'bson_ext'
 gem 'mongoid-grid_fs', git: 'https://github.com/ahoward/mongoid-grid_fs.git'
