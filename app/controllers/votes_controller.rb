@@ -13,7 +13,9 @@ class VotesController < ApplicationController
     answers = get_answers params[:votes]
     question = answers.first.question
     type = Type.find(question.type_id)
-    if type.name != "qcm" && answers.count > 1
+    if user.nil?
+      render json: {error: "Invalidate token. You must sign in."}, status: 422
+    elsif type.name != "qcm" && answers.count > 1
       render json: {error: "You can vote for several answers only on qcm" }, status: 422
     end
     render json: type.to_json
