@@ -1,8 +1,0 @@
-signup: {"user":{"email":"milkathedog@gmail.com","username":"milka", "firstname":"abdel", "lastname":"azzedine",
-   	  "town":"bagdad","country":"irak","sex":"h","birthday":"01/01/1993",
-	  "password":"ptinctropcool", "password_confirmation":"ptinctropcool"}}
-
-signin: {"user":{"email":"zel@gmail.com", "password":"roiheenok"}}
-
-postquestion: {"question":{"name":"Mourir en héro ou vieillir en s'avillisant", "type_id":"54e08e9370632d17ea060000"
-              , "answer":"En héro", "answer2":"Vieillir"}}
