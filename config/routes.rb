@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
 
   root 'pages#index'
-  get 'pages/vote' => 'pages#vote'
+  get 'users' => 'pages#get_all_users'
+  get 'users/:id' => 'pages#get_one_user'
   get 'pages/types' => 'pages#get_all_types'
+  
   resources :votes
   resources :questions
 
   devise_for :users, controllers: { registrations: "users/registrations", sessions: "users/sessions" }
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -8,5 +8,6 @@ class Answer
 
   belongs_to 							:question
   has_many 								:votes, dependent: :destroy
+  
   validates 							:name, presence: true
 end

@@ -6,6 +6,7 @@ class Vote
   field :name,						type: String
   field :user_id, 				type: BSON::ObjectId
   field :answer_id, 			type: BSON::ObjectId
+  field :question_id,     type: BSON::ObjectId
     
   belongs_to :answer
   belongs_to :user

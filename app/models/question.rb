@@ -6,12 +6,11 @@ class Question
   field :name,				    type: String
   field :user_id,         type: BSON::ObjectId
   field :type_id,         type: BSON::ObjectId
-  field :result_type,     type: String
-  field :question,        type: String
 	 
   belongs_to              :user
-  validates               :name, presence: true, length: { minimum: 3 }
-  validates               :type_id, presence: true
   has_many                :answers, dependent: :destroy
   has_one                 :type
+
+  validates               :name, presence: true, length: { minimum: 3 }
+  validates               :type_id, presence: true
 end

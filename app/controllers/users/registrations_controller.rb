@@ -28,6 +28,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
       end
     end
 
+    def destroy
+      user = User.where(authentication_token: params[:token]).first
+      if user.nil? || !user.valid_password?(params[:user][:current_password])
+        render json: {error: "The current_password is incorrect"}, status: 422
+      elsif user.destroy
+        render json: {success: "Your question have been destroyed." }, status: 200
+    end
+
     private
       def sign_up_params
         params.require(:user).permit(:firstname, :lastname, :username, :town, :country, :sex, :birthday, :email, :password, :password_confirmation)

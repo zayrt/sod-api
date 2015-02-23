@@ -6,7 +6,7 @@ development:
         - localhost:27017
       options:
   options:
-
+    raise_not_found_error: false
 #development:
 #  sessions:
 #    default:
@@ -30,3 +30,5 @@ production:
         retry_interval: 1
         timeout: 15
         refresh_interval: 10
+  options: #strictly 2 spaces before
+    raise_not_found_error: false
