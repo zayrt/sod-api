@@ -34,6 +34,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         render json: {error: "The current_password is incorrect"}, status: 422
       elsif user.destroy
         render json: {success: "Your question have been destroyed." }, status: 200
+      end
     end
 
     private
